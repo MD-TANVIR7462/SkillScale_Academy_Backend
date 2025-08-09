@@ -11,4 +11,4 @@ router.patch("/update-question/:id", questionController.updateQuestion);
 router.delete("/delete-question/:id", questionController.deleteQuestion);
 
 
-export const customerRouter = router;
+export const questionRouter = router;
