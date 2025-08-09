@@ -6,8 +6,8 @@ import { questionServices } from "./Question.service";
 // Create a new question
 const createQuestion: RequestHandler = async (req, res, next) => {
   try {
-    const validatedData = questionSchema.parse(req.body);
-    const result = await questionServices.createquestion(validatedData);
+    // const validatedData = questionSchema.parse(req.body);
+    const result = await questionServices.createquestion(req.body);
     success(res, result, "question created");
   } catch (err: any) {
     next(err);

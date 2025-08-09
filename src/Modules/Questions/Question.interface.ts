@@ -1,15 +1,17 @@
 export type TQuestion = {
-   question: string;
-   options: TOptions[];
-   correctAnswer: string;
-   level: string;
-   createdAt?: Date;
-   updatedAt?: Date;
-   timeAllowed?: number;
-}
+  question: string;
+  options: TOptions[];
+  correctAnswer: string;
+  level: string;
+  createdAt?: Date;
+  updatedAt?: Date;
+  timeAllowed?: number;
+  isDeleted?: boolean;
+  isActive?: boolean;
+};
 
 export type TOptions = {
-   serial: string,
-   text: string;
-   isCorrect: boolean;
-}
+  serial: string;
+  text: string;
+  isCorrect: boolean;
+};

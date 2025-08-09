@@ -2,7 +2,7 @@ import { TQuestion } from "./Question.interface";
 import { QuestionModel } from "./Question.model";
 
 const createquestion = async (data: TQuestion) => {
-  return await QuestionModel.create(data);
+  return await QuestionModel.insertMany(data);
 };
 
 const getquestions = async (query: any) => {
@@ -25,7 +25,7 @@ const updatequestion = async (id: string, data: Partial<TQuestion>) => {
   });
 };
 
-// Soft-delete a question
+// delete a question
 const deletequestion = async (id: string) => {
   return await QuestionModel.findByIdAndUpdate(id, { isDeleted: true }, { new: true });
 };

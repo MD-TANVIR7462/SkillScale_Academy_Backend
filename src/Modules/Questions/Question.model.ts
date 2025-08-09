@@ -19,6 +19,8 @@ const QuestionSchema = new Schema<TQuestion>(
     correctAnswer: { type: String, required: true },
     level: { type: String, required: true },
     timeAllowed: { type: Number },
+    isActive:{type:Boolean,default:true},
+    isDeleted:{type:Boolean,default:false}
   },
   { timestamps: true }
 );
